@@ -1,20 +1,32 @@
 # Zero Exchange App
 
-[![Lint](https://github.com/zeroexchange/app/workflows/Lint/badge.svg)](https://github.com/zeroexchange/app/actions?query=workflow%3ALint)
-[![Tests](https://github.com/zeroexchange/app/workflows/Tests/badge.svg)](https://github.com/zeroexchange/app/actions?query=workflow%3ATests)
-[![Styled With Prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://prettier.io/)
+**Zero Exchange App** is an open‑source web interface for **Zero Exchange**, a fork of Uniswap that enables **cross‑chain liquidity between Ethereum and Avalanche**. This repository is based on the original implementation and focuses on maintaining clarity, developer‑friendliness, and ease of contribution.
 
-An open source interface for Zero Exchange -- a fork of uniswap providing cross chain liquidity from Ethereum to Avalanche.
+---
 
-- Website: [0.exchange](https://0.exchange/)
-- App: [app.0.exchange](https://app.0.exchange)
-- Blog: [blog.0.exchange/](https://blog.0.exchange/)
-- Twitter: [@OfficialZeroDEX](https://twitter.com/OfficialZeroDEX)
-- Email: [hello@0.exchange](mailto:hello@0.exchange)
-- Discord: [Zero Exchange](https://discord.com/invite/5xwKdqrtDu)
-- Learn More: [Learn More](https://0.exchange/learn-more)
+## ✨ Highlights
 
-## Development
+* Cross‑chain liquidity support (Ethereum ↔ Avalanche)
+* Built on a Uniswap‑based architecture
+* Clean, modern frontend
+* Styled and formatted using **Prettier**
+* Lint and formatting friendly
+
+---
+
+## 🌐 Links
+
+* **Website:** [https://0.exchange](https://0.exchange)
+* **App:** [https://app.0.exchange](https://app.0.exchange)
+* **Blog:** [https://blog.0.exchange](https://blog.0.exchange)
+* **Twitter:** @OfficialZeroDEX
+* **Email:** [hello@0.exchange](mailto:hello@0.exchange)
+* **Discord:** Zero Exchange
+* **Learn More:** [https://0.exchange](https://0.exchange)
+
+---
+
+## 🧑‍💻 Development
 
 ### Install Dependencies
 
@@ -22,26 +34,63 @@ An open source interface for Zero Exchange -- a fork of uniswap providing cross 
 yarn
 ```
 
-### Run
+---
+
+### Run Locally
 
 ```bash
 yarn start
 ```
 
-### Configuring the environment (optional)
+The app will be available at:
 
-To have the interface default to a different network when a wallet is not connected:
+```
+http://localhost:3000
+```
 
-1. Make a copy of `.env` named `.env.local`
-2. Change `REACT_APP_NETWORK_ID` to `"{YOUR_NETWORK_ID}"`
-3. Change `REACT_APP_NETWORK_URL` to e.g. `"https://{YOUR_NETWORK_ID}.infura.io/v3/{YOUR_INFURA_KEY}"`
+---
 
-Note that the interface only works on testnets where both
-[Uniswap V2](https://uniswap.org/docs/v2/smart-contracts/factory/) and
-[multicall](https://github.com/makerdao/multicall) are deployed.
-The interface will not work on other networks.
+## ⚙️ Environment Configuration (Optional)
 
-## Contributions
+To set a default network when no wallet is connected:
 
-**Please open all pull requests against the `master` branch.**
-CI checks will run against all PRs.
+1. Create a local environment file:
+
+```bash
+cp .env .env.local
+```
+
+2. Update the following variables in `.env.local`:
+
+```env
+REACT_APP_NETWORK_ID={YOUR_NETWORK_ID}
+REACT_APP_NETWORK_URL=https://{YOUR_NETWORK_ID}.infura.io/v3/{YOUR_INFURA_KEY}
+```
+
+⚠️ **Important Notes**:
+
+* The interface only works on **testnets** where **Uniswap V2** and **Multicall** contracts are deployed.
+* Unsupported networks will not function correctly.
+
+---
+
+## 🤝 Contributions
+
+Contributions are welcome and appreciated!
+
+* Please open **all pull requests against the `master` branch**
+* CI checks will automatically run on every PR
+* Follow the existing code style and ensure formatting passes
+
+---
+
+## 📜 License
+
+This project is open‑source and available under its respective license. See the `LICENSE` file for details.
+
+---
+
+## 🙏 Acknowledgements
+
+* Inspired by **Uniswap**
+* Built and maintained by the **Zero Exchange** community
